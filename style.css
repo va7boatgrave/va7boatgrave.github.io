@@ -1,0 +1,414 @@
+@font-face {
+    font-family: 'Old English Text MT';
+    src: url('fonts/OldEnglishTextMT-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "OldNewspaperTypes";
+    src: url('fonts/OldNewspaperTypes.ttf') format('truetype');
+}
+
+body, #intro-slide {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+} 
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Old English Text MT', Arial, sans-serif;
+}
+
+#Va7-Intro-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#Va7-Intro-header h1 {
+    animation: fadeIn 6s ease-in-out forwards;
+    animation-delay: 0s;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    position: /*sticky;*/ static;
+    top: 0;
+    z-index: 100;
+    background-color: #ffffff;
+    padding: 10px;
+}
+.navbar img {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+.navbar h1 {
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding-right: 20px;
+}
+.navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 0 15px;
+    font-size: 50px;
+}
+.navbar a:hover {
+    text-decoration: underline;
+}
+/* CONTENT */
+/* header-intro */
+#header-intro {
+    text-align: center;
+    font-size: 50px;
+}
+
+/*intro slide of front page*/
+
+#intro-slide {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(0, 0, 0); 
+    background-attachment: fixed;
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+@keyframes fadeIn-same {
+    0% {opacity: 0.15;}
+    50% {opacity: 1;}
+    100% {opacity: 0.15;}
+}
+
+#scroll-down {
+    position: absolute;
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%); /* STUPID CENTERING */
+    z-index: 2;
+    font-size: 20px;
+    color: #fff;
+}
+
+#scroll-down-icon {
+    width: 150px;
+    height: 100px;
+    opacity: 0;
+    animation: fadeIn-same 6s ease-in-out infinite;
+    animation-delay: 3s;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+    z-index: 1;
+}
+
+#countdown {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+}
+
+/*boxes*/
+.objects-showcase {
+display: flex;
+justify-content: space-around;
+padding: auto;
+padding-top: 30px;
+padding-bottom: 15px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    width: 200px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+    margin: 10px;
+}
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+}
+.card:active {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: scale(0.97);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.card p {
+    margin: 0;
+    margin-top: auto;
+    padding: 15px;
+}
+/* specific cards */
+#boatgrave_map {
+    width: 600px;
+}
+
+
+/* SVG STUFF */
+.svg-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-button {
+    margin: 0 20px; /* Adjust as needed */
+}
+
+.central-image {
+    width: 350px;
+    height: 100px;
+}
+
+/* three in a row */
+.three-in-a-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.three-in-a-row > div {
+    flex: 1;
+    margin: 0 10px;
+}
+
+#spec_image {
+    width: 50%;
+    height: 50%;
+}
+
+.three-in-a-row > div > #3-1, #3-3 {
+    flex: 1;
+    margin: 0 10px;
+    width: 33vw;
+    height: 100vh;
+}
+
+/* ICONS */
+
+@keyframes cont_rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes swing {
+    0% { transform: rotate(0deg); }
+    33% { transform: rotate(-15deg); }
+    66% { transform: rotate(15deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* SWORD ICON*/
+#turn-on-off-sword {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+#sword-button {
+    background-color: #ffffff;
+    border: none;/*2px solid #00000000;*/
+    transition: transform 0.2s;
+}
+
+#sword-button:active {
+    transform: scale(1.2);
+}
+
+#sword-icon {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2s;
+    animation: swing 2s ease-in-out 3; /* cont_rotate 2s linear; /*infinite;*/
+    animation-delay: 1s;
+}
+
+#sword-button:active #sword-icon {
+    transform: scale(1.2);
+}
+
+/* MAGNIFYING GLASS ICON */
+#turn-on-off-helmet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+#helmet-button {
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    transition: transform 0.2s;
+}
+
+#helmet-button:active {
+    transform: scale(1.2);
+}
+
+#magnifying-glass-icon {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2s;
+    animation: swing 2s ease-in-out 3; /* cont_rotate 2s linear; /*infinite;*/
+    animation-delay: 1s;
+}
+
+#magnifying-glass-icon:active #magnifying-glass-icon {
+    transform: scale(1.2);
+}
+
+/* CAROUSEL */
+.carousel-item {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+
+/*OLD NEWSPAPER*/
+#oldnewspaper {
+    font-family: 'OldNewspaperTypes', sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "main aside"
+        "footer footer";
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;  
+}
+
+#VaTimes {
+    font-size: 50px;
+    text-align: center;
+}
+
+#VaTimes a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 0 15px;
+    font-size: 50px;
+}
+#oldnewspaper header {
+    grid-area: header;
+}
+
+#oldnewspaper main {
+    grid-area: main;
+}
+
+#oldnewspaper aside {
+    grid-area: aside;
+}
+
+#oldnewspaper footer {
+    grid-area: footer;
+}
+
+/* MOTIFS LIST */
+.container-of-two {
+    display: flex;
+    align-items: start;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    height: 400px;
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.divider {
+    width: 1px;
+    background-color: grey;
+    margin: 0 20px;
+}
+
+.information {
+    flex: 1;
+    /*border-left: 1px solid grey;
+    /* height of the parent element 
+    height: 100%;*/
+}
+
+/* END CONTENT */
+footer {
+    margin-top: auto;
+    /*center text*/
+    text-align: center;
+}
+
+footer a {
+    color: rgb(0, 0, 0);
+}

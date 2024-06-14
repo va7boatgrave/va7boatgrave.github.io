@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valsgärde 7 Boatgrave</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+            overflow-y: hidden;
+        }
+    </style>
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <!-- <div id="Va7-Intro-header">
+        <h1>The Valsgärde 7 Boat Grave</h1>
+    </div> -->
+
+
+    <div id="intro-slide">
+        <video autoplay loop muted id="background-video">
+            <source src="imgs/Va7_with_overlay.mp4" type="video/mp4">
+        </video>
+        
+        <div id="scroll-down">
+            <a href="#objects-showcase" id = "scroll-down-link" onclick="enableScroll()">
+                <img id="scroll-down-icon" src="imgs/scroll-svgrepo-com.svg" alt="Scroll down">
+            </a>
+        </div>
+    </div>
+
+    <div class ="objects-showcase" id = "objects-showcase">
+        <div class="card" id = "boatgrave_map">
+            <a href="va7_boatgrave.html">
+                <img src="imgs/Va7_boatgrave.jpeg" alt="Boatgrave">
+                <p>Boatgrave</p>
+            </a>
+        </div>
+
+        <div class="card">
+            <a href="va7_helmet.html#header-intro">
+                <img src="imgs/Va7_helmet.JPG" alt="Helmet">
+                <p>Helmet</p>
+            </a>
+        </div>
+        <div class="card">
+            <a href="va7_sword.html">
+                <img src="imgs/Va7_sword.jpg" alt="Sword">
+                <p>Sword</p>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>(C) 2024 <a href = "https://nkcz.github.io/">NKCZ</a>. Learn more about the project <a href="about.html">here</a>.</p>
+    </footer>
+</body>
+</html>
