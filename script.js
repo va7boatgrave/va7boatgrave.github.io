@@ -153,14 +153,6 @@ window.changeImage = function(id, file_name, desc) {
 
 /* TEST */
 
-
-window.changeDescription = function(id) {
-    // Get the div with the specified id.
-    var div = document.querySelector('div.container-of-two#' + id);
-
-    // Find the description in the gallery.
-    var description = div.querySelector('.image-description');
-
-    // Set the text of the description.
-    description.textContent = "Va7";
+function showNotImplementedMessage() {
+    alert("This feature is not yet implemented.");
 }

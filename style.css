@@ -316,14 +316,24 @@ padding-bottom: 15px;
     font-family: 'OldNewspaperTypes', sans-serif;
     background-repeat: no-repeat;
     background-size: cover;
-    display: grid;
+    /*display: grid;
     grid-template-areas: 
         "header header"
         "main aside"
         "footer footer";
     grid-template-columns: 2fr 1fr;
     grid-gap: 20px;
+    */
     padding: 20px;  
+}
+
+.news-article {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    margin: 20px auto; /* Center align by setting the left and right margin to auto */
+    border-radius: 10px;
+    display: block; /* Ensure it's a block-level element */
+    width: 80%; /* Set a specific width to allow centering */
 }
 
 #VaTimes {
@@ -396,8 +406,10 @@ padding-bottom: 15px;
 }
 
 .information {
+    font-family: 'Times New Roman', Times, serif;
     flex: 1;
-    /*border-left: 1px solid grey;
+    /*border-left: 1px solid grey;     background-color: rgba(228, 220, 220, 0.2);
+    display: block;
     /* height of the parent element 
     height: 100%;*/
 }
